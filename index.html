@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Threesome Ultimate Frisbee</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#/game" id="game" class="active">Game</a>
+			<a href="#/ranking" id="ranking">Ranking</a>
+			<a href="#/schedule" id="schedule">Schedule</a>
+		</nav>
+	</header>
+	
+	<section data-route="game" class="active">
+		<hgroup>
+			<h1 data-bind="title"></h1>
+			<h2 data-bind="sub_title"></h2>
+		</hgroup>
+		<table>
+			<thead>
+				<tr>
+					<td>Nr.</td>
+					<td>Team</td>
+					<td>Score</td>
+					<td>Team 2</td>
+					<td>Score</td>
+				</tr>
+			</thead>
+			<tbody data-bind="games">
+				<tr>
+					<td data-bind="nr"></td>
+					<td data-bind="team"></td>
+					<td data-bind="score1"></td>
+					<td data-bind="team2"></td>
+					<td data-bind="score2"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<section data-route="ranking">
+		<hgroup>
+			<h1 data-bind="title"></h1>
+			<h2 data-bind="sub_title"></h2>
+		</hgroup>
+		<table>
+			<thead>
+				<tr>
+					<td>Team</td>
+					<td>Win</td>
+					<td>Lost</td>
+					<td>Sw</td>
+					<td>Sl</td>
+					<td>Pw</td>
+					<td>Pl</td>
+				</tr>
+			</thead>
+			<tbody data-bind="teams">
+				<tr>
+					<td data-bind="team"></td>
+					<td data-bind="win"></td>
+					<td data-bind="lost"></td>
+					<td data-bind="sw"></td>
+					<td data-bind="sl"></td>
+					<td data-bind="pw"></td>
+					<td data-bind="pl"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<section data-route="schedule">
+		<hgroup>
+			<h1 data-bind="title"></h1>
+			<h2 data-bind="sub_title"></h2>
+		</hgroup>
+		<table>
+			<thead>
+				<tr>
+					<td>Date</td>
+					<td>Team</td>
+					<td>Teamscore</td>
+					<td>Team 2</td>
+					<td>Teamscore</td>
+				</tr>
+			</thead>
+			<tbody data-bind="dates">
+				<tr>
+					<td data-bind="date"></td>
+					<td data-bind="team"></td>
+					<td data-bind="teamscore1"></td>
+					<td data-bind="team2"></td>
+					<td data-bind="teamscore2"></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	<script src="js/domready.js" type="text/javascript"></script>
+	<script src="js/router.js" type="text/javascript"></script> <!--Waarom had joost geen type achter de routie.js gezet? -->
+	<script src="js/transparency.js" type="text/javascript"></script>
+	<script src="js/qwery.js" type="text/javascript"></script>
+	<script src="js/tuf.js" type="text/javascript"></script>
+</body>
+</html>
